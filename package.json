@@ -1,6 +1,6 @@
 {
   "name": "gtnh-java-style-skill",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "Install an Agent Skill that teaches coding agents the GT New Horizons Java code style.",
   "type": "module",
   "bin": {
