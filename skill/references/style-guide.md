@@ -129,6 +129,29 @@ if ((a == b) && (c == d)) {
 
 over relying on every reader to mentally evaluate precedence correctly.
 
+## Imports
+
+Do not use wildcard imports. GTNH checks this automatically.
+
+Prefer explicit imports:
+
+```java
+import java.util.List;
+import java.util.Map;
+```
+
+Avoid:
+
+```java
+import java.util.*;
+```
+
+Static wildcard imports are allowed:
+
+```java
+import static org.junit.Assert.*;
+```
+
 ## Review checklist
 
 Check in this order: formatter/Spotless, member organization, comments, declarations, naming, GTNH log style, field visibility, constants, assignments, deprecation pairing, then expression clarity. Keep fixes local to the touched code unless the user explicitly requests a broader cleanup.

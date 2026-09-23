@@ -37,6 +37,7 @@ While editing:
 - Keep `@Deprecated` and `@deprecated` Javadoc paired, and point to the replacement.
 - Use parentheses generously in mixed-operator expressions when they improve clarity.
 - For GTNH logs, normally use one write call per line; keep one-sentence messages lowercase.
+- Do not use wildcard imports; static wildcard imports are allowed.
 
 After editing, run the repository's formatter/checker if available. Prefer the project's own Gradle tasks over manually reformatting around them.
 
