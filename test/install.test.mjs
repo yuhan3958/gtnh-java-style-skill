@@ -22,8 +22,10 @@ test('installs the GTNH skill into ~/.agents/skills by default', async () => {
   const result = run([], { HOME: home, USERPROFILE: home });
 
   assert.equal(result.status, 0, result.stderr);
+
   const target = join(home, '.agents', 'skills', 'gtnh-java-style', 'SKILL.md');
-  const body = await readFile(target, 'utf8');
+  const body = (await readFile(target, 'utf8')).replace(/\r\n/g, '\n');
+
   assert.match(body, /^---\nname: gtnh-java-style\n/m);
   assert.match(body, /Spotless/);
 });
@@ -50,12 +52,14 @@ test('refuses to overwrite without --force', async () => {
 test('--force overwrites an existing installation', async () => {
   const root = await mkdtemp(join(tmpdir(), 'gtnh-skill-target-'));
   assert.equal(run(['--dir', root]).status, 0);
+
   const result = run(['--dir', root, '--force']);
   assert.equal(result.status, 0, result.stderr);
 });
 
 test('--help prints usage without installing', () => {
   const result = run(['--help']);
+
   assert.equal(result.status, 0, result.stderr);
   assert.match(result.stdout, /Usage:/);
   assert.match(result.stdout, /--dir/);
