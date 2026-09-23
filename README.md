@@ -42,15 +42,6 @@ npm pack
 npx ./gtnh-java-style-skill-0.1.0.tgz --dir ./tmp-skills
 ```
 
-## Publish
-
-1. Pick an available npm package name if `gtnh-java-style-skill` is already taken.
-2. Run `npm login`.
-3. Run `npm run check`.
-4. Run `npm publish`.
-
-The package has one `bin` entry, so `npx gtnh-java-style-skill` resolves directly to the installer.
-
 ## Licensing and attribution
 
 The installer code is MIT licensed. The skill documentation is adapted from the GT New Horizons Wiki “Code Style” page and is licensed under CC BY-SA 4.0. See `LICENSE` for details.
