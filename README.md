@@ -6,8 +6,6 @@ It turns the GTNH Code Style wiki page into a compact agent workflow plus an on-
 
 ## Install with npx
 
-After publishing to npm:
-
 ```bash
 npx gtnh-java-style-skill
 ```
