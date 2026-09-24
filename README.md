@@ -39,7 +39,7 @@ Test the package exactly as npm will publish it:
 
 ```bash
 npm pack
-npx ./gtnh-java-style-skill-0.1.0.tgz --dir ./tmp-skills
+npx ./gtnh-java-style-skill-0.1.1.tgz --dir ./tmp-skills
 ```
 
 ## Licensing and attribution
